@@ -2,8 +2,8 @@
 <html>
 
 <head>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
     <title>Magusalao programm</title>
     <meta charset="utf-8">
 
@@ -17,11 +17,15 @@
 
 <body>
 
-    <?php foreach (message_list() as $message):?> 
+    <?php
+foreach (message_list() as $message):
+?> 
         <p class="message_list">
             <?= $message; ?>
-        </p>
-    <?php endforeach; ?>
+       </p>
+    <?php
+endforeach;
+?>
 
     <div class="logout_btn">
         <form method="post"  action="<?= $_SERVER['PHP_SELF']; ?>">
@@ -79,19 +83,18 @@
         <tbody>
 
         <?php
-        foreach (model_load($page) as $rida): ?>
+foreach (model_load($page) as $rida):
+?>
 
             <tr>
                 <td>
-                    <?=
-                        htmlspecialchars($rida['nimetus']);
-                    ?>
-                </td>
+                    <?= htmlspecialchars($rida['nimetus']); ?>
+               </td>
                 <td>
-                    <form method="post" action="<?= $_SERVER['PHP_SELF'];?>">
+                    <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
                         <input type="hidden" name="action" value="update">
-                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token'];?>">
-                        <input type="hidden" name="id" value="<?= $rida['id'];?>">
+                        <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>">
+                        <input type="hidden" name="id" value="<?= $rida['id']; ?>">
 
                         <input type="number" class="koguse_lahter" name="kogus" value="<?= $rida['kogus']; ?>">
                         <button type="submit">Uuenda</button>
@@ -99,7 +102,7 @@
                 </td>
                 <td>
 
-                    <form method="post" action="<?= $_SERVER['PHP_SELF'];?>">
+                    <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
                         <input type="hidden" name="action" value="delete">
                         <input type="hidden" name="csrf_token" value="<?= $_SESSION['csrf_token']; ?>">
                         <input type="hidden" name="id" value="<?= $rida['id']; ?>">
@@ -109,7 +112,9 @@
                 </td>
             </tr>
 
-        <?php endforeach; ?>
+        <?php
+endforeach;
+?>
 
         </tbody>
     </table>

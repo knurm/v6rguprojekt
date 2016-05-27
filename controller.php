@@ -5,7 +5,7 @@ function controller_add($nimetus, $kogus)
         message_add('Tegevus eeldab sisselogimist');
         return false;
     }
-
+    
     if ($nimetus == '' || $kogus <= 0) {
         message_add('Vigased sisendandmed');
         return false;
@@ -29,7 +29,7 @@ function controller_delete($id)
         return false;
     }
     if (model_delete($id)) {
-        message_add('Kustutati rida '.$id);
+        message_add('Kustutati rida ' . $id);
         return true;
     }
     message_add('Rea kustutamine ebaõnnestus');
@@ -47,7 +47,7 @@ function controller_update($id, $kogus)
         return false;
     }
     if (model_update($id, $kogus)) {
-        message_add('Uuendati andmeid real '.$id);
+        message_add('Uuendati andmeid real ' . $id);
         return true;
     }
     message_add('Andmete uuendamine ebaõnnestus');
@@ -120,7 +120,7 @@ function message_list()
     if (empty($_SESSION['messages'])) {
         return array();
     }
-    $messages = $_SESSION['messages'];
+    $messages             = $_SESSION['messages'];
     $_SESSION['messages'] = array();
     return $messages;
 }

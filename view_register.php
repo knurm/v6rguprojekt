@@ -1,18 +1,22 @@
 <!doctype html>
 <html>
     <head>
-		<link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <meta charset="utf8" />
         <title>Registreeri konto</title>
     </head>
     <body>
 
-        <?php foreach (message_list() as $message):?>
-            <p class="message_list">
+        <?php
+foreach (message_list() as $message):
+?>
+           <p class="message_list">
                 <?= $message; ?>
-            </p>
-        <?php endforeach; ?>
-	
+           </p>
+        <?php
+endforeach;
+?>
+   
         <h1>Registreeri konto</h1>
 
         <form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">

@@ -1,18 +1,22 @@
 <!doctype html>
 <html>
     <head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-	
+        <link rel="stylesheet" type="text/css" href="style.css">
+    
         <meta charset="utf8" />
         <title>Logi sisse</title>
     </head>
     <body>
 
-        <?php foreach (message_list() as $message):?>
-            <p style="border: 1px solid blue; background: #EEE;">
+        <?php
+foreach (message_list() as $message):
+?>
+           <p style="border: 1px solid blue; background: #EEE;">
                 <?= $message; ?>
-            </p>
-        <?php endforeach; ?>
+           </p>
+        <?php
+endforeach;
+?>
 
         <h1>Logi sisse</h1>
 
