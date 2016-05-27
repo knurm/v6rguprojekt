@@ -1,0 +1,27 @@
+.center {
+    margin-left:auto; 
+    margin-right:auto;
+  }
+  
+.message_list {
+	border: 1px solid blue; 
+	background: #EEE;
+}
+
+.logout_btn {
+	float: right;
+}
+
+.koguse_lahter {
+	width: 5em; 
+	text-align: right;
+}
+
+ p, h1 {
+	text-align: center;
+ }
+ 
+ button {
+	 border-radius: 10px;
+	 height: 25px;
+ }
